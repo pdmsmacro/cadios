@@ -1,7 +1,7 @@
 $*---------- HPGL File Conversion for Nozzle Sheet -----------------
 $*
 $*   Macro Name: autoplot
-$*   Made by H.SAIKI                         REV.1   96/09/10
+$*   Made by                      REV.1   96/09/10
 $*
 $* (Note: Must execute this macro file on an objective DRWG hierarchy.)
 
