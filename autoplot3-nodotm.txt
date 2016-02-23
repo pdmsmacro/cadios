@@ -1,0 +1,36 @@
+$*---------- HPGL File Conversion for Nozzle Sheet -----------------
+$*
+$*   Macro Name: autoplot
+$*   Made by H.SAIKI                         REV.1   96/09/10
+$*
+$* (Note: Must execute this macro file on an objective DRWG hierarchy.)
+
+
+VAR!COL COLLECT ALL SHEET FOR CE
+do !dumm to (arraysize(!COL))
+  $!COL[$!dumm]
+var !SHEE NAM
+!hbo= substring('$!SHEE',3)
+
+
+VAR!PLTFIL REPL(|$!hbo|, |/|,|-|)
+
+$(
+       VAR1 (AFTER (|$!PLTFIL|, |-|))
+
+ $*PLOT $!SHEE /GZAPLOT/$v1.plt 1189 841 CUTM OFF over ----
+   $)
+   
+   !final='$!pltfil'+'.plt'
+PLOT $!SHEE /c:PLOTTING/$!final 420 297 CUTM OFF over
+
+
+
+ENDDO
+
+$.
+
+
+-D01-003-S1.plt
+//D01-003/S1
+
